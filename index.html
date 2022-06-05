@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
     <table class="main-table">
         <tr height=500>
-            <td>
-                Are you lost? ☹
-            </td>
+            <td>Are you lost? ☹</td>
+        </tr>
+        <tr>
+            <td id="ipaddress"></td>
         </tr>
     </table>
 </body>
+
+<script type="application/javascript">
+    function getIP(json) {
+        if (json.ip != "undefined")
+            document.getElementById("ipaddress").innerHTML = "Your IP address is: " + json.ip;
+    }
+</script>
+
+<script src="http://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 </html>
-
-
