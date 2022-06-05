@@ -1,0 +1,13 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000;
+    color: #d8dbd7;
+    font-family: courier new, courier, fixed-width;
+    overflow: hidden;
+}
+
+.main-table {
+    margin-left: auto;
+    margin-right: auto;
+}
