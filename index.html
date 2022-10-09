@@ -20,10 +20,21 @@
 </body>
 
 <script type="application/javascript">
+	const DOMAIN = "https://www.ramonasuncion.com";
+	
     function getIP(json) {
         if (json.ip != "undefined")
             document.getElementById("ipaddress").innerHTML = "Your IP address is: " + json.ip;
     }
+
+    function redirect() {
+    	window.location = DOMAIN;
+    }
+
+    document.write("<h4 style='text-align: center; color: red;'>Unauthorized Access: You will be redirected to ramonasuncion.com shortly.</h4>")
+
+    setTimeout("redirect()", 4000);
+
 </script>
 
 <script src="http://api.ipify.org?format=jsonp&callback=getIP"></script>
